@@ -1,5 +1,9 @@
+import { ContaCorrente } from "./ContaCorrente";
 
 export abstract class Conta {
+    static cadastrar(contacorrente: ContaCorrente) {
+        throw new Error("Method not implemented.");
+    }
 
     // Atributos privados
     private _numero: number;
@@ -7,6 +11,7 @@ export abstract class Conta {
     private _tipo: number;
     private _titular: string;
     private _saldo: number;
+    static numero: string;
 
     // Construtor
     constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number) {
